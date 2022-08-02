@@ -19,6 +19,7 @@ menu:
         - name: Tags
           url: tags/
           weight: 10
+  
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "Musings of an Engineering Leader"
@@ -26,6 +27,8 @@ params:
 
     defaultTheme: auto
     ShowShareButtons: true
+    ShowBreadCrumbs: true
+    ShowPostNavLinks: true
 
     homeInfoParams:
         Title: "Musings of an Engineering Leader"
@@ -40,3 +43,9 @@ params:
           url: "https://github.com/silent1mezzo"
         - name: Rss
           url: "index.xml"
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
