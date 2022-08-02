@@ -1,0 +1,4 @@
+---
+title: "Management"
+layout: "management"
+---

@@ -1,0 +1,29 @@
+{{- define "main" }}
+<header class="page-header">
+    <h1>{{ .Title }} ({{ len .Site.Taxonomies.categories.books }})</h1>
+    {{- if .Description }}
+        <div class="post-description">
+            {{ .Description }}
+        </div>
+    {{- end }}
+</header>
+{{ $pages := .Site.Taxonomies.categories.books }}
+
+{{ range $pages }}
+      <div class="archive-entry">
+        <a href="{{ .Permalink }}">
+        <h3 class="archive-entry-title">
+          {{- .Title | markdownify }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+        </h3>
+        <div class="archive-meta">
+          {{- partial "post_meta.html" . -}}
+        </div>
+        <div class="archive-content">
+            <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+        </div>
+        </a>
+      </div>
+{{- end }}
+
+{{- end }}{{- /* end main */ -}}
