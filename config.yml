@@ -1,0 +1,42 @@
+baseURL: https://mckerlie.com
+languageCode: en-us
+title: Adam McKerlie
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+menu:
+    main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    description: "Musings of an Engineering Leader"
+    author: Adam McKerlie
+
+    defaultTheme: auto
+    ShowShareButtons: true
+
+    homeInfoParams:
+        Title: "Musings of an Engineering Leader"
+        Content: >
+            
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/adammckerlie"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/adammckerlie/"
+        - name: github
+          url: "https://github.com/silent1mezzo"
+        - name: Rss
+          url: "index.xml"
