@@ -12,3 +12,4 @@ jobs:
         name: Spellcheck
         with:
           source_files: content
+          task_name: Markdown
