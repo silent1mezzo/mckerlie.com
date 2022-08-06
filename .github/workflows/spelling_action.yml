@@ -6,9 +6,9 @@ jobs:
     name: Spellcheck
     runs-on: ubuntu-latest
     steps:
-    # The checkout step
-    - uses: actions/checkout@master
-    - uses: rojopolis/spellcheck-github-actions@0.26.0
-      name: Spellcheck
+      # The checkout step
+      - uses: actions/checkout@master
+      - uses: rojopolis/spellcheck-github-actions@0.26.0
+        name: Spellcheck
     sources:
-      - *.md
+      - content/*.md
