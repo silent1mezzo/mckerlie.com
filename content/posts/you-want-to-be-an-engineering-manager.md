@@ -1,6 +1,6 @@
 ---
 title: "So, you want to become an Engineering Manager?"
-date: 2022-08-08
+date: 2022-08-06
 categories: management
 ---
 
