@@ -4,8 +4,7 @@ on: push
 jobs:
   build:
     name: Spellcheck
-    sources:
-      - content/*.md
+    source_files: content
     runs-on: ubuntu-latest
     steps:
       # The checkout step
