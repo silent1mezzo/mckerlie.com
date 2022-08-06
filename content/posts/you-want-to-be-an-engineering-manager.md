@@ -4,7 +4,7 @@ date: 2022-08-08
 categories: management
 ---
 
-Most developers at one point or another in their careers have thought about switching into management. Maybe your boss left suddenly and you were the most senior engineer on the team. Maybe you've spent a number of years in yur current role and are wanting a new challenge. Or, if you're lucky, your mentor brought up some traits they thought would make you a really good manager. Whatever the reason, you're here now, trying to figure out whether this is the right move for you.
+Most developers at one point or another in their careers have thought about switching into management. Maybe your boss left suddenly and you were the most senior engineer on the team. Maybe you've spent a number of years in your current role and are wanting a new challenge. Or, if you're lucky, your mentor brought up some traits they thought would make you a really good manager. Whatever the reason, you're here now, trying to figure out whether this is the right move for you.
 
 Transitioning to any role is incredibly difficult. You have new responsibilities, new expectations, different ways getting results and so on. Moving from an individual contributor (IC) role to that of a manager is even more difficult because you're actually changing careers.
 
