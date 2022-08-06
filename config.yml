@@ -10,15 +10,15 @@ buildExpired: false
 
 menu:
     main:
-        - name: Archive
-          url: archives
-          weight: 1
         - name: Management
           url: management
-          weight: 2
+          weight: 1
         - name: Books
           url: books
-          weight: 3 
+          weight: 2
+        - name: Archives
+          url: archives
+          weight: 3
         - name: Search
           url: search/
           weight: 10
