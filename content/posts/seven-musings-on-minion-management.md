@@ -1,6 +1,6 @@
 ---
 title: "7 Musings on Minion Management"
-date: 2022-08-02T00:02:47-04:00
+date: 2017-09-08
 categories: management
 ---
 
