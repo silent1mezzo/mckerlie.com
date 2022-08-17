@@ -1,6 +1,7 @@
 # Speeding up Postgres Restores Part 2
 
-![Pug wrapped in a blanket](pg-pug-2.jpeg)*Apparently there’s a lot of pugs in blankets*
+![Pug wrapped in a blanket](pg-pug-2.jpeg)
+*\Apparently there’s a lot of pugs in blankets\*
 
 In  [Part 1 of Speeding up Postgres Restores](/posts/speeding-up-postgres-restores/)  I talked about how we improved the time it took to restore our local environments. Initially, we started out naively pg_dump’ing (is this a word?), gzipping, unzipping, and then piping the output using psql < file.sql. This took over 30 minutes to do a full restore. In the end, we used [ Postgres’ custom format](https://www.postgresql.org/docs/current/static/app-pgdump.html)  and used the job’s argument to speed up the restore to only 16 minutes.
 
