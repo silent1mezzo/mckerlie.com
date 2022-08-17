@@ -1,12 +1,10 @@
-# 
 ---
 title: "Speeding up Postgres Restores"
 date: 2016-03-04
 categories: development
 ---
 
-![Pug wrapped in a blanket](pg-pug.jpeg)
-*How I felt throughout this process*
+![Pug wrapped in a blanket](pg-pug.jpeg)*How I felt throughout this process*
 
 Recently I sat down to speed up our database restore process in our development environment. Like most projects, our database started out small and grew significantly over the years. When we started the database was just a couple of MB uncompressed. Now it’s almost 2GB compressed (50GB uncompressed). We restore our dev environment once a week on average and the old way of doing restores was no longer working. When I saw “ [DB restore foos?](https://xkcd.com/303/) ” in our Slack channel I knew it was time to fix this.
 

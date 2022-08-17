@@ -1,4 +1,8 @@
-# Speeding up Postgres Restores Part 2
+---
+title: "Speeding up Postgres Restores Part 2"
+date: 2017-04-12
+categories: development
+---
 
 ![Pug wrapped in a blanket](pg-pug-2.jpeg)*Apparently there’s a lot of pugs in blankets*
 
