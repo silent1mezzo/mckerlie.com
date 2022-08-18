@@ -145,9 +145,10 @@ hilt_offset = ((4 - 1), (5 - 1) // 2) # (3, 2)
 Finally, we have to pass in the original image as a mask, otherwise, Pillow will default the transparent backgrounds into black. By using a mask Pillow only writes data to the output image for the pixels that have colour. The image below on the left has a mask applied, the one on the right does not.
 
 <p align="center">
-    <img src="blue-transparent.png" alt="Transparent blue lightsaber">
-    <img src="blue-opaque.png" alt="Opaque blue lightsaber">
+    <img src="blue-transparent.png" alt="Transparent blue lightsaber" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">
+    <img src="blue-opaque.png" alt="Opaque blue lightsaber" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">
 </p>
+<p style="clear: both;">
 
 ## Adding Hilt Offsets and Extra Information
 When calculating the blade offset you may have noticed a variable `hilt_offset`. In some designs, the part where the blade comes out of the hilt isn’t the start of the lightsaber. In these cases I needed the blade to start “below” where the hilt starts. Knowing that I needed to do this but also store metadata on hilts, blades, buttons and pommels down the road I created a manifest.py file to store these defaults.
@@ -323,9 +324,10 @@ def generate_lightsaber():
 The next challenge I encountered with pommels was designing them so they looked nice across all hilts. When I first designed the lightsaber I included both the hilt and the pommel. When I realized I needed to split them out to allow for more unique combinations I simply cut the old 8-bit images in two. The problem with this is that the colour schemes between hilts and pommels just didn’t match.
 
 <p align="center">
-    <img src="h1b1u4p2.png">
-    <img src="h2b1u1p1.png">
+    <img src="h1b1u4p2.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">
+    <img src="h2b1u1p1.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">
 </p>
+<p style="clear: both;">
 
 After a lot of thinking I decided that I could do something similar to how green screens work. If I designed the images with specific colours (in this case Red = Primary, Blue = Secondary and Green = Tertiary) I could pull them out using Pillow and Numpy and substitute them for the colours I want.
 
@@ -382,9 +384,10 @@ def generate_lightsaber():
 Once I did that everything was all set. The pommels now have the correct colour scheme as the lightsaber.
 
 <p align="center">
-    <img src="h2b9u1p1.png">
-    <img src="h1b9u1p2-1.png">
+    <img src="h2b9u1p1.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">
+    <img src="h1b9u1p2-1.png" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;">
 </p>
+<p style="clear: both;">
 
 ## Generating Random Tweet Text
 The final part of all of this is generating the actual tweet. I added a number of fields to the manifest file including the hilt length and material, the blade colour, crystal and who used it and finally the pommel length. After that a new function, `generate_tweet_text`, that pulls all of this new information together and generates the text to tweet out.
