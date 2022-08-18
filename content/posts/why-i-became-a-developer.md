@@ -17,5 +17,5 @@ Being a developer also lets me build a large range of things. I can build a webs
 ## Continuous Learning
 As a developer, if you’re not learning the latest technology you get left behind very quickly. There’s always a new language coming out or a new framework to read about. While this can become overwhelming at first I often find trying a new language out to be a  [fun experiment](https://tech.gadventures.com/we-taught-a-neural-network-to-write-a-blog-6463f619ac4c)  on a day off. I’ve also found that this constant learning makes programming stay fresh and fun.
 
-I’ve since been promoted to  [Manager](/post/from-developer-to-manager/)  and now a Director but I think these concepts still ring true, just at a different scale. While I don’t directly build applications and websites anymore I get to build more things by building an amazing team. I’d love to hear why you became a developer. Let me know in the comments below.
+I’ve since been promoted to  [Manager](/posts/from-developer-to-manager/)  and now a Director but I think these concepts still ring true, just at a different scale. While I don’t directly build applications and websites anymore I get to build more things by building an amazing team. I’d love to hear why you became a developer. Let me know in the comments below.
 
