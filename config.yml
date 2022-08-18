@@ -8,6 +8,11 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+
 menu:
     main:
         - name: Management

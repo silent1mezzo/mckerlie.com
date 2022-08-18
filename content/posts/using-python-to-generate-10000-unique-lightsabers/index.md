@@ -10,7 +10,10 @@ Python is great for a number of things. It powers [1.4% of the internet](https:/
 ## TL;DR
 I created a computer program that generates a unique lightsaber made out of four different parts (blade, hilt, pommel and button) and [tweets it out](https://twitter.com/dailylightsaber/status/1252351344834297860) once a day along with some statistics about the lightsaber.
 
-![Luke's Red Lightsaber](luke-red.png)*Luke briefly had a red lightsaber*
+<p align="center">
+    <img src="luke-red.png" alt="Luke's Red Lightsaber">
+    <em>Luke briefly had a red lightsaber</em>
+</p>
 
 ## Getting Started
 The overall premise of this script is fairly simple. It randomly selects four pieces of a lightsaber and then pieces them together. To achieve this I used an online tool called [Piskel](https://www.piskelapp.com/) to generate all of the 8-bit parts. While Piskel is normally used to create animated sprites for websites it’s one of the better 8-bit art editors. My favourite feature from it is the ability to mirror lines. This simplifies the process of making symmetrical lightsabers.
@@ -42,7 +45,7 @@ Pillow==7.1.1
 tweepy==3.8.0
 ```
 
-The first version of this script was really this simple. Call generate_lightsaber and that’s it. Up next I’ll talk about how I generated the [initial lightsaber](https://procrastinatingdev.com/using-python-to-generate-over-10000-unique-8-bit-lightsabers/#adding-lightsaber-blades-hilts) (just the blade and hilt), then how I added [buttons](https://procrastinatingdev.com/using-python-to-generate-over-10000-unique-8-bit-lightsabers/#adding-lightsaber-buttons) and [pommels](https://procrastinatingdev.com/using-python-to-generate-over-10000-unique-8-bit-lightsabers/#adding-lightsaber-pommels) and finally how I [tweeted the final image](https://procrastinatingdev.com/using-python-to-generate-over-10000-unique-8-bit-lightsabers/#how-to-tweet).
+The first version of this script was really this simple. Call generate_lightsaber and that’s it. Up next I’ll talk about how I generated the [initial lightsaber](/posts/using-python-to-generate-10000-unique-lightsabers/#adding-blades-and-hilts) (just the blade and hilt), then how I added [buttons](/posts/using-python-to-generate-10000-unique-lightsabers/#adding-buttons) and [pommels](/posts/using-python-to-generate-10000-unique-lightsabers/#adding-pommels) and finally how I [tweeted the final image](/posts/using-python-to-generate-10000-unique-lightsabers/#generating-random-tweet-text).
 
 ```
 # lightsaber.py
@@ -103,7 +106,11 @@ def generate_lightsaber():
 irst, we’ll fetch the paths as described above. After that, we’ll use Pillow to open the images as well as create a new output image with the width and height specified by Twitter to allow us to show the entire image as a preview. Finally we paste the two original images and save the output.
 
 When pasting the images onto the output you’ll see two arguments that I haven’t shown yet, `<part>_offset` and `mask`. The offset is used to determine where the parts are placed on the output image. When you get this wrong, funny things can happen.
-![Nubby lightsaber](nub-1.png)*The tiniest of blades*
+
+<p align="center">
+    <img src="nub-1.png" alt="Nubby lightsaber">
+    <em>The tiniest of blades</em>
+</p>
 
 To calculate the offset, where the image gets placed, I need to get and store all of the dimensions of the images. Then we calculate the middle position for the width `(output_w - blade_w) // 2` this aligns it horizontally on the image. This is true for both the blade and the hilt.
 
@@ -119,7 +126,10 @@ blade_offset = ((output_h - blade_h - hilt_h + hilt_offset), (output_w - blade_w
 hilt_offset = (output_h - hilt_h, (output_w - hilt_w) // 2)
 ```
 
-![Grid for pixels](grid.png)*You can think of the image like an array*
+<p align="center">
+    <img src="grid.png" alt="Grid for pixels">
+    <em>You can think of the image like an array</em>
+</p>
 
 Using the array above as an example, if we had a lightsaber 1px wide and 2px (1px hilt, 1px blade) tall the math would be.
 
@@ -128,13 +138,16 @@ blade_offset = ((4 - 1 - 1), (5 - 1) // 2 ) # (2, 2)
 hilt_offset = ((4 - 1), (5 - 1) // 2) # (3, 2)
 ```
 
-
-
-![Grid for pixels with hilt](grid2.png)
+<p align="center">
+    <img src="grid2.png" alt="Grid for pixels with hilt">
+</p>
 
 Finally, we have to pass in the original image as a mask, otherwise, Pillow will default the transparent backgrounds into black. By using a mask Pillow only writes data to the output image for the pixels that have colour. The image below on the left has a mask applied, the one on the right does not.
 
-![Transparent blue lightsaber](blue-transparent.png) ![Opaque blue lightsaber](blue-opaque.png)
+<p align="center">
+    <img src="blue-transparent.png" alt="Transparent blue lightsaber">
+    <img src="blue-opaque.png" alt="Opaque blue lightsaber">
+</p>
 
 ## Adding Hilt Offsets and Extra Information
 When calculating the blade offset you may have noticed a variable `hilt_offset`. In some designs, the part where the blade comes out of the hilt isn’t the start of the lightsaber. In these cases I needed the blade to start “below” where the hilt starts. Knowing that I needed to do this but also store metadata on hilts, blades, buttons and pommels down the road I created a manifest.py file to store these defaults.
@@ -166,7 +179,11 @@ def generate_lightsaber():
 ```
 
 Without this offset, I was originally getting a floating blade for certain designs. You can see below that the bottom of the blade lines up with the top of the rightmost side of the lightsaber but it still looks funny.
-![Floating blade mistake](floating-saber.png)*The force must be keeping this thing together*
+
+<p align="center">
+    <img src="floating-saber.png" alt="Floating blade mistake">
+    <em>The force must be keeping this thing together</em>
+</p>
 
 This manifest file also holds information on button offsets, colours and tweet information but I’ll go more in-depth into that later on.
 
@@ -244,7 +261,11 @@ def get_button_offset(hilt):
 
 ## Adding Pommels
 Once again, pommels were added to the image in much the same way as the others only this time I needed to update the height of both the blade and the hilt to accommodate the pommel. This didn’t go well at first.
-![Squished pommel](bad-pommel.png)*This is what happens when you get your +’s and -‘s mixed up*
+
+<p align="center">
+    <img src="bad-pommel.png" alt="Squished pommel">
+    <em>This is what happens when you get your +’s and -‘s mixed up</em>
+</p>
 
 ```
 # lightsaber.py
@@ -301,11 +322,16 @@ def generate_lightsaber():
 
 The next challenge I encountered with pommels was designing them so they looked nice across all hilts. When I first designed the lightsaber I included both the hilt and the pommel. When I realized I needed to split them out to allow for more unique combinations I simply cut the old 8-bit images in two. The problem with this is that the colour schemes between hilts and pommels just didn’t match.
 
-![](h1b1u4p2.png) ![](h2b1u1p1.png)
+<p align="center">
+    <img src="h1b1u4p2.png">
+    <img src="h2b1u1p1.png">
+</p>
 
 After a lot of thinking I decided that I could do something similar to how green screens work. If I designed the images with specific colours (in this case Red = Primary, Blue = Secondary and Green = Tertiary) I could pull them out using Pillow and Numpy and substitute them for the colours I want.
 
-![Pommel Colours to change the primary/secondary/tertiary colours](pommel-colours.png)
+<p align="center">
+    <img src="pommel-colours.png" alt="Pommel Colours to change the primary/secondary/tertiary colours">
+</p>
 
 ```
 # manifest.py
@@ -354,7 +380,11 @@ def generate_lightsaber():
 ```
 
 Once I did that everything was all set. The pommels now have the correct colour scheme as the lightsaber.
-![](h2b9u1p1.png) ![](h1b9u1p2-1.png)
+
+<p align="center">
+    <img src="h2b9u1p1.png">
+    <img src="h1b9u1p2-1.png">
+</p>
 
 ## Generating Random Tweet Text
 The final part of all of this is generating the actual tweet. I added a number of fields to the manifest file including the hilt length and material, the blade colour, crystal and who used it and finally the pommel length. After that a new function, `generate_tweet_text`, that pulls all of this new information together and generates the text to tweet out.
