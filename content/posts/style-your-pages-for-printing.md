@@ -1,6 +1,6 @@
 ---
 title: "How To Style Your Pages For Print"
-date: 2022-08-18
+date: 2008-08-18
 categories: development
 ---
 

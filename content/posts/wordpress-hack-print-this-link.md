@@ -1,6 +1,6 @@
 ---
 title: "Wordpress Hack: Adding a ‘Print This’ Link to Your Posts"
-date: 2022-08-12
+date: 2008-08-12
 categories: development
 ---
 
