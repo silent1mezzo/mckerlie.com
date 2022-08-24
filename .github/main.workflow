@@ -13,6 +13,6 @@ action "linkcheck" {
   needs = "filter-to-pr-open-synced"
   secrets = ["GITHUB_TOKEN"]
   env = {
-    HUGO_FINAL_URL = "https://mysite.com"
+    HUGO_FINAL_URL = "https://mckerlie.com"
   }
 }
