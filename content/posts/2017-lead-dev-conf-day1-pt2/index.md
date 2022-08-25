@@ -1,0 +1,81 @@
+---
+title: "The Lead Developer Conference — Day 1 (Part 2)"
+date: 2017-08-09
+categories: management
+---
+
+![](day1.jpeg#center)
+
+After lunch, we came back to a number of excellent talks. I always find the afternoons the most difficult to pay attention to since your brain is full from the morning sessions and your stomach is full from lunch but at the Lead Developer Conference I found myself fully engrossed with all of the talks.
+
+*You can read about the first part of [day1](/posts/2017-lead-dev-conf-day1-pt1)*
+
+## Rob Allen — 5 Features of a Good API
+This was the first technical talk of the day and it didn’t disappoint. Rob talked about the 5 features of a good API:
+
+* Malleability
+* Correctness
+* Good error handling
+* Good documentation
+* Good security
+
+One of the main things I took away from this talk is that error messages are written for humans, error codes for computers. This spoke to me on a number of levels since I think it’s a useful concept across development as a whole.
+
+He mentioned four RFC’s to help you with your API’s. RFC [7230](https://tools.ietf.org/html/rfc7230), [7231](https://tools.ietf.org/html/rfc7231) relate to making sure your API is correct. RFC [7807](https://tools.ietf.org/html/rfc7807) details error messages for APIs. RFC [6906](https://tools.ietf.org/html/rfc6906) details the profile link in an API and shows how you can use it to link to your documentation.
+
+
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/8b2ce37db8b247fe94c7d5339fbfe6fb" title="5 Features of  a Good API" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: 314px;" data-ratio="1.78343949044586"></iframe>
+
+## Anjuan Simmons — Leadership Lessons from the Agile Manifesto
+Anjuan spoke about various leadership lessons we could take from the Agile Manifesto. I found this talk useful even though I’ve never read the Agile Manifesto or worked for a company that subscribes to the Agile methodology.
+The four values mentioned were:
+* Individuals and interactions over processes and tools
+* Working software over comprehensive documentation
+* Customer collaboration over contract negotiation
+* Responding to change over following a plan
+
+One of the things I always say to my teams is that we need to get it done first and then we can iterate it. Anjuan had a slide that simply had “Working Always Ships Faster than Perfect” that I related to.
+
+{{< youtube bvGLTNrJ5io >}}
+
+## Cate Huston — YOLO Releases Considered Harmful — Running An Effective Mobile Engineering Team
+I unfortunately don’t have many notes from this talk since I don’t manage any mobile teams and the information seemed fairly specific to mobile releases. There were a few tidbits of advice that stuck out to me.
+
+“Best way for teams to fight? Give them conflicting incentives.”
+
+“Invest in things that make everyone more productive.”
+
+“Being transparent as to what you are working on (as manager) is good.”
+
+{{< tweet user="adammckerlie" id="872816281073983489" >}}
+
+There were also copious amounts of racoons in this talk which made it awesome. Unfortunately, the slides for this talk aren’t available (or at least I can’t find them).
+
+## Erika Carlson — Better: Fearless Feedback for Software Teams
+This was hands down, one of my favourite talks of the conference. I took away over two pages of notes.
+The key takeaways for me were:
+
+1. **Listen Actively**. This includes listening to listen and not just to respond. Being conscious of your body language and confirming your understanding, especially for constructive feedback
+2. **Say Thank You**. Accept positive feedback graciously without denying or minimizing it. Accept constructive feedback without arguing, pushing back or getting defensive.
+3. **Respond (later).**When you receive constructive feedback make sure you take some time to respond so that you’re not just responding with your emotions.
+4. **Assume the best**. It’s best to always assume positive intent, especially if the feedback is given through a text medium.
+5. **Be specific**. Regardless of the type of feedback, it’s most useful if it’s specific. Name actions and behaviours and quote directly if appropriate.
+6. **Let it land**. In order for critical feedback to be effective, it needs to be direct and unmitigated. Attempting to soften feedback can lessen its impact.
+7. **Be Collaborate**. Ask before delivering unsolicited constructive feedback and give the person options as to when and how they would like to receive feedback.
+8. **Avoid anti-patterns**. Focus on what a person did, not who they are.
+9. **Lead by example**. Your team notices what you model, good feedback culture starts with leadership.
+10. **Practice**! The best way to get good at giving and receiving feedback is to practice. This practice can be done with a teammate, friend or mentor.
+
+Since hearing this talk I immediately added two questions into my 1:1’s. “How do you prefer to receive feedback?” and “How often do you prefer to receive feedback”. These are two questions which have helped me provide better feedback to my team.
+
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/93R2AuFs4sj25m" width="100%" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+
+## Nickolas Means — The Original Skunk Works*
+This talk by Nickolas was more of a narrative than a normal presentation. I was so engrossed with his storytelling abilities that I didn’t take any notes. I strongly recommend watching it.
+
+{{< youtube pL3Yzjk5R4M >}}
+
+Day 1 ended with a mixer at the conference. I spoke with a number of senior developers, managers, directors and VPs and was impressed with the quality of people who attended this event. Here's [Day 2](/posts/2017-lead-dev-conf-day2) of the Lead Developer Conference 2017.
+
+
+
