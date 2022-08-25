@@ -2,4 +2,4 @@
   command = "hugo --buildDrafts --buildFuture -b $DEPLOY_PRIME_URL"
 
 [build.environment]
-  HUGO_VERSION = ""0.101.0
+  HUGO_VERSION = "0.101.0"
