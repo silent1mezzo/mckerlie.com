@@ -4,7 +4,6 @@ date: 2008-07-09
 categories: development
 ---
 
-# 
 Most software projects follow a fairly similar path from creation to completion. They start with talking to the user, getting the requirements for the project. It moves to the next stage, taking the requirements and getting them on paper (designing your software). After that, you get into coding, testing, bug fixing and more testing, and finally, you show the finished project to the client.
 
 Now I know that I’ve outlined a fairly crude time-line but that's the basics of it. Over the next few weeks I’m going to go over each of the parts of the software project time-line and outline a few of the things that I find difficult.

@@ -3,7 +3,7 @@ title: "Creating Software: Test, Test and More Test"
 date: 2008-08-28
 categories: development
 ---
-# 
+
 > “If debugging is the process of removing bugs, then programming must be the process of putting them in.”  
 > -Edsger Dijkstra  
 
