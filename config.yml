@@ -17,19 +17,22 @@ menu:
     main:
         - name: Management
           url: management
-          weight: 1
+          weight: 10
         - name: Books
           url: books
-          weight: 2
+          weight: 20
         - name: Archives
           url: archives
-          weight: 3
+          weight: 30
         - name: Search
           url: search/
-          weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
+          weight: 40
+        - name: Resume
+          url: resume.pdf
+          weight: 50
+        #- name: Tags
+        #  url: tags/
+        #  weight: 10
   
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -44,7 +47,7 @@ params:
 
     homeInfoParams:
         Title: "Musings of an Engineering Leader"
-        Content: >
+        Content: Hey 👋, I'm Adam! I'm an experienced leader with the unique combination of deep technical expertise, executive leadership, and engineering management. I love solving challenging engineering problems, growing businesses, and leading teams. 
             
     socialIcons:
         - name: twitter
