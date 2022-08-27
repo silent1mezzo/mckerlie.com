@@ -47,7 +47,7 @@ params:
 
     homeInfoParams:
         Title: "Musings of an Engineering Leader"
-        Content: Hey 👋, I'm Adam! I'm an experienced leader with the unique combination of deep technical expertise, executive leadership, and engineering management. I love solving challenging engineering problems, growing businesses, and leading teams. 
+        Content: Hey 👋, I'm Adam! I'm an experienced leader with deep technical expertise, executive leadership, and engineering management. I love solving challenging engineering problems, growing businesses, and leading teams. 
             
     socialIcons:
         - name: twitter
