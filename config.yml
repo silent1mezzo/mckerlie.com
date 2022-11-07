@@ -64,3 +64,5 @@ outputs:
         - HTML
         - RSS
         - JSON # is necessary
+
+googleAnalytics: G-5NRQRVF63V
