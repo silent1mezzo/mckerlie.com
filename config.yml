@@ -52,6 +52,8 @@ params:
     socialIcons:
         - name: twitter
           url: "https://twitter.com/adammckerlie"
+        - name: mastodon
+          url: "https://fosstodon.org/@adammckerlie"
         - name: linkedin
           url: "https://www.linkedin.com/in/adammckerlie/"
         - name: github
