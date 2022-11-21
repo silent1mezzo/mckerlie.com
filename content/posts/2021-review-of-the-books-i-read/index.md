@@ -8,10 +8,10 @@ In 2021 I read [9 books](https://www.goodreads.com/review/list/7269489-adam?orde
 
 ## Favourite Books
 
-## [Project Hail Mary – Andy Weir](https://www.goodreads.com/book/show/54493401-project-hail-mary) 
+### [Project Hail Mary – Andy Weir](https://www.goodreads.com/book/show/54493401-project-hail-mary) 
 Project Hail Mary was a really fun read. I really enjoy Weir’s style of writing and the story kept me wanting to find out what was going to happen. As one reviewer put it “This book is half science experiments, half wacky buddy comedy — and it just works so so so well!”
 
-## [Inclusify: The Power of Uniqueness and Belonging to Build Innovative Teams – Stefanie Johnson](https://www.goodreads.com/book/show/52167185-inclusify) 
+### [Inclusify: The Power of Uniqueness and Belonging to Build Innovative Teams – Stefanie Johnson](https://www.goodreads.com/book/show/52167185-inclusify) 
 An excellent book on inclusion in the workplace and how to foster it from a leadership position. Offered a good blend of data, anecdotes, and steps to be taken for different management styles.
 
 ## Statistics
