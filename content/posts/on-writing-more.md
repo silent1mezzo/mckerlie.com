@@ -8,8 +8,6 @@ I've been a big proponent of writing as a form of learning for many years. In Un
 
 Over the years I wrote less and less, all while guiding engineers to write more and more. I could attribute this to [having a family](https://mckerlie.com/posts/9-promises-to-my-son/) and a busier life, to focusing on my career but I think the main reason is I put more and more pressure on making sure everything I put on here was high quality. When I built a [lightsaber art generator](https://mckerlie.com/posts/using-python-to-generate-10000-unique-lightsabers/) I spent over 20 hours writing about it. I still wrote about things that were important to me but I switched over to writing twitter threads because I felt the barrier to entry was lower. It was ok if I just spewed my thoughts without making sure the formatting was perfect or I had the perfect opening line. It wasn't until yesterday when I was asking about threads in Mastodon (more on this in a later article) that I realized I had placed this artificial level of quality on myself. 
 
-{{< stoot "fosstodon.org" "109374357201077977" >}}
-
 I realize that it's hypocritical of me to tell people they should write about things they're interested in or working on while I sit around and do nothing so my goal for 2023 is to take things that I would normally write on -Twitter- [Mastodon](https://fosstodon.org/@adammckerlie) and instead write a blog post.
 
 I'm going to achieve this by:
