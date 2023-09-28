@@ -5,7 +5,7 @@ tags: [management]
 postSlug: 2017-lead-dev-conf-day2
 ---
  
-![](./day2.jpeg#center)
+![](./day2.jpeg)
 
 In this article, I’ll go over the talks delivered on Day 2 of the [Lead Developer Conference](https://2017.theleaddeveloper.com/). Again, this was a fantastic conference that you should think about attending in the future, especially if you’re leading technical teams.
 

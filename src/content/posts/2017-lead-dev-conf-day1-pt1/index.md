@@ -5,7 +5,7 @@ tags: [management]
 postSlug: 2017-lead-dev-conf-day1-pt1
 ---
 
-![](./day-1.jpeg#center)
+![](./day-1.jpeg)
 
 One June 8th and 9th I attended the Lead Developer Conference in London England. The two-day conference, geared towards Managers, Directors, VPs and CTOs, was extremely well planned and executed, and all of the speakers were top notch. In this post I’ll be summarizing and highlighting half of the talks from Day 1.
 

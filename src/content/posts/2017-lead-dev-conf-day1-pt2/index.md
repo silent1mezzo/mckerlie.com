@@ -5,7 +5,7 @@ tags: [management]
 postSlug: 2017-lead-dev-conf-day1-pt2
 ---
 
-![](./day1.jpeg#center)
+![](./day1.jpeg)
 
 After lunch, we came back to a number of excellent talks. I always find the afternoons the most difficult to pay attention to since your brain is full from the morning sessions and your stomach is full from lunch but at the Lead Developer Conference I found myself fully engrossed with all of the talks.
 
