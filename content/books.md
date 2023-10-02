@@ -1,4 +1,0 @@
----
-title: "Books"
-layout: "books"
----
