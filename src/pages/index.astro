@@ -27,6 +27,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <p>
         Hey 👋, I’m Adam! I’m an experienced leader with deep technical expertise, executive leadership, and engineering management. I love solving challenging engineering problems, growing businesses, and leading teams.
       </p>
+
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
@@ -68,7 +69,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             .filter(({ data }) => !data.featured)
             .map(
               ({ data }, index) =>
-                index < 4 && (
+                index < 10 && (
                   <Card
                     href={`/posts/${slugify(data)}`}
                     frontmatter={data}

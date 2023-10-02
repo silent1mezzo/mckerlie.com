@@ -12,7 +12,7 @@ Here's the lightning talk I gave on how (not) to start a new hobby. The tone of 
 
 ### Talk
 
-{{< youtube TDsCMTRlhvI >}}
+https://www.youtube.com/watch?v=TDsCMTRlhvI
 
 ### Slides
 
