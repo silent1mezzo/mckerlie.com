@@ -24,5 +24,66 @@ npm create astro@latest
 npm create astro@latest -- --template <template name>
 ```
 
-Once you've 
+Once you've created the new project you can start migrating your posts over. I found that when moving a few over at a time helped me with debugging. When I moved the entire post directory over I got lost with what needed to be updated. Once I figured out the issues (`pubDate` vs `date`, images and public directory) moving over the posts in bulk and editing them went a little easier.
+
+If you've spent a lot of time building a custom 
+
 ## Challenges
+
+**pubDate vs date**
+
+**Images**
+In Hugo, images can be stored either in the same directory as a post or in the assets directory. Hugo allows for page resouces and global resources and does a little magic to check both cases
+
+```
+content/
+└── posts/
+    └── post-1/           <-- page bundle
+        ├── index.md
+        └── sunset.jpg    <-- page resource
+
+```
+```md
+![Image text](sunset.jpg)
+```
+
+and to access a global resource
+```
+assets/
+└── images/
+    └── sunset.jpg    <-- global resource
+```
+```md
+![Other image text](images/sunset.jpg)
+```
+
+In Astro, it's recommended to store your images in your `src` directory, for global resources you store them in your `public` directory. This worked well for me since I was already storing them in the same directory as my posts. The main difference is that, in Astro, you need to reference them by their relative path. This tripped me up for a while and I had to update every post that had images.
+
+```
+content/
+└── posts/
+    └── post-1/           <-- page bundle
+        ├── index.md
+        └── sunset.jpg    <-- page resource
+
+```
+```md
+![Image text](./sunset.jpg)
+```
+
+To access a global resource the reference stays the same, you just move the images from `assets` to `public`
+```
+public/
+└── images/
+    └── sunset.jpg    <-- global resource
+```
+```md
+![Other image text](images/sunset.jpg)
+```
+
+**Public directory**
+The second issue that I struggled with was my [resume](/resume.pdf) and other global resources not showing up. This one took me a little longer than it should have since everything worked locally and then when I pushed to production the files would 404. 
+
+When you [build Hugo](https://gohugo.io/getting-started/usage/#build-your-site), it compiles and builds all of your pages and publishes them to the `public` directory. Since I was hosting my site with Netlify and running the build command there, I didn't need git to track changes to it so I added it to my `.gitignore` file. [Removing this](https://github.com/silent1mezzo/mckerlie.com/commit/c2e68c21bb6ae1563473a3e84fc5cd6449c75ee2) made my resume and other global files start showing up.
+
+## Final Thoughts
