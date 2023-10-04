@@ -24,9 +24,10 @@ npm create astro@latest
 npm create astro@latest -- --template <template name>
 ```
 
-Once you've created the new project you can start migrating your posts over. I found that when moving a few over at a time helped me with debugging. When I moved the entire post directory over I got lost with what needed to be updated. Once I figured out the issues (`pubDate` vs `date`, images and public directory) moving over the posts in bulk and editing them went a little easier.
+Once you've created the new project you can start migrating your posts over. I found that when moving a few over at a time helped me with debugging. When I moved the entire post directory over I got lost with what needed to be updated. Once I figured out the issues on a couple posts (`pubDate` vs `date`, images and public directory) moving over the rest in bulk and editing them went a little quicker.
 
-If you've spent a lot of time building a custom 
+Next up, you'll need to either port your theme over or start from scratch. Astro includes a [number of themes](https://astro.build/themes/) you can use to get started. Because of the differences in querying, extending your markdown and more I decided to go this route.
+
 
 ## Challenges
 
