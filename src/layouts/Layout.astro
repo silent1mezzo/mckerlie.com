@@ -30,6 +30,15 @@ const socialImageURL = new URL(
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NRQRVF63V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5NRQRVF63V');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -83,7 +92,7 @@ const socialImageURL = new URL(
     <script is:inline src="/toggle-theme.js"></script>
     <script>
       import * as Sentry from '@sentry/browser';
-    
+
       Sentry.init({
         dsn: 'https://3ec5190943c3445d314ff2144751d8c1@o436943.ingest.sentry.io/4505986690973696',
         integrations: [
