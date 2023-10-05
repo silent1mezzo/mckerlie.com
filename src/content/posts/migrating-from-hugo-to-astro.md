@@ -27,9 +27,9 @@ npm create astro@latest -- --template <template name>
 ```
 
 ### Migrating your content
-I found that moving a few over at a time helped me with debugging. When I moved the entire post directory over I got lost with what needed to be updated. Once I figured out the issues on a couple posts (`pubDate` vs. `date`, images and public directory) moving over the rest in bulk and editing them went a little quicker.
+I started by moving the entire post directory over to Astro’s format, but I found it to be a challenge to understand and fix the subtle differences between Hugo and Astro. I reset and began to move a few posts at a time so that I could debug a small batch, learning and understanding the pitfalls between the two formats (such as pubdate vs date, images and public dir). With this knowledge I was able to move the rest over in bulk with minimal headache.
 
-I only worried about a theme after I migrated my content. I didn't want to get too invested until I was sure I could easily move my content. You'll need to either port your theme over or start from scratch, Astro includes a [number of themes](https://astro.build/themes/) you can use to get started. Because of the differences in querying, extending your markdown and more I decided to go this route.
+I only worried about a theme after I migrated my content because I didn't want to get too invested until I was sure I could easily move my content. I personally found it easier to start from scratch because of the differences in querying, extending markdown, etc... Astro includes a [number of themes](https://astro.build/themes/) you can use to get started.
 
 ### Extending Markdown
 In Hugo, you can extend your markdown by creating and using [`shortcodes`](https://gohugo.io/content-management/shortcodes/). For me, I used a couple of the built-in ones for embedding YouTube videos and Tweets.
@@ -68,7 +68,7 @@ And then add them to your MDX post.
 
 ```mdx
 ---
-Frontmatter YAML
+Front Matter YAML
 ---
 
 import { Tweet } from '@astro-community/astro-embed-twitter';
@@ -80,8 +80,8 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 
 ## Challenges
 
-### Different frontmatter variables (pubDate vs. date and tags vs. categories)
-The first challenge I ran into was the different requirements for frontmatter variables. Hugo uses `date` and `categories` whereas Astro uses `pubDate` and `tags`. I handled these in two different ways. I personally prefer `date` over `pubDate` so I went in and changed Astro's Collection. I changed it in `content/config.ts` and then any other file that referenced `pubDate`.
+### Different front matter variables (pubDate vs. date and tags vs. categories)
+The first challenge I ran into was the different requirements for front matter variables. Hugo uses `date` and `categories` whereas Astro uses `pubDate` and `tags`. I handled these in two different ways. I personally prefer `date` over `pubDate` so I went in and changed Astro's Collection. I changed it in `content/config.ts` and then any other file that referenced `pubDate`.
 
 ```ts
 const posts = defineCollection({
@@ -96,7 +96,11 @@ const posts = defineCollection({
 });
 ```
 
-For `categories` -> `tags`. I did a simple search and replace in my `content/posts` directory. 
+For `categories` -> `tags`. I did a simple search and replace in my `content/posts` directory using VS Code's [find and replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace). You could also do this in your terminal using sed.
+
+```zsh
+find content/posts -type f -exec sed -i "" "s/categories/tags/g" {} \;
+```
 
 ### Images
 In Hugo, images can be stored either in the same directory as a post or in the assets directory. Hugo allows for page resources and global resources and does a little magic to check both cases
