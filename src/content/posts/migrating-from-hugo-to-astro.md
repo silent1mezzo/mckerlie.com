@@ -8,7 +8,7 @@ tags: [development, meta]
 Early this month I finally migrated this blog from [Hugo](https://gohugo.io/) to [Astro](https://astro.build/). Overall it was fairly easy but I'm going to talk about the reasons why I made the change, the things I needed to do, and the challenges I ran into converting the site.
 
 ## Why move from Hugo to Astro?
-First and foremost, both Hugo and Astro are frameworks for building websites, especially statically generated content like blogs. Hugo is written in Go and uses a Go-based templating system whereas Astro is built with Javascript and uses a templating system more similar to React with components. I struggled with extending Hugo, querying for posts, routing and extending markdown. For me, this blog was my first foray into Go ([technically second](https://github.com/openflagr/flagr/pulls?q=is%3Apr+author%3Asilent1mezzo+is%3Aclosed)) and as much as I want to like it, I've just never been able to get proficient with the language. I have been using Javascript (and React) for several years now and Astro feels much more at home. 
+First and foremost, both Hugo and Astro are frameworks for building websites, especially statically generated content like blogs. Hugo is written in Go and uses a Go-based templating system whereas Astro is built with Javascript and uses a templating system more similar to React with components. I struggled with extending Hugo, querying for posts, routing and extending markdown, which was primarily due to my lack of Go knowledge. For me, this blog was my first foray into Go ([technically second](https://github.com/openflagr/flagr/pulls?q=is%3Apr+author%3Asilent1mezzo+is%3Aclosed)) and as much as I want to like it, I've just never been able to get proficient with the language. I have been using Javascript (and React) for several years now and I feel much more at home with Astro. 
 
 I also mainly wanted to learn more about Astro and the way that I learn new frameworks and languages is by working on an actual project.
 
@@ -27,7 +27,7 @@ npm create astro@latest -- --template <template name>
 ```
 
 ### Migrating your content
-Once you've created the new project you can start migrating your posts over. I found that moving a few over at a time helped me with debugging. When I moved the entire post directory over I got lost with what needed to be updated. Once I figured out the issues on a couple posts (`pubDate` vs `date`, images and public directory) moving over the rest in bulk and editing them went a little quicker.
+I found that moving a few over at a time helped me with debugging. When I moved the entire post directory over I got lost with what needed to be updated. Once I figured out the issues on a couple posts (`pubDate` vs. `date`, images and public directory) moving over the rest in bulk and editing them went a little quicker.
 
 I only worried about a theme after I migrated my content. I didn't want to get too invested until I was sure I could easily move my content. You'll need to either port your theme over or start from scratch, Astro includes a [number of themes](https://astro.build/themes/) you can use to get started. Because of the differences in querying, extending your markdown and more I decided to go this route.
 
@@ -58,7 +58,7 @@ export default defineConfig({
 });
 ```
 
-Now you can add or change a Markdown file to MDX file by changing the file type `.md` -> `.mdx`. To embed YouTube videos or Tweets simply install a couple of community plugins
+Now you can add or change a Markdown file to a MDX file by changing the file type `.md` -> `.mdx`. To embed YouTube videos or Tweets simply install a couple of community plugins
 
 ```zsh
 npm i @astro-community/astro-embed-youtube @astro-community/astro-embed-twitter
@@ -80,8 +80,8 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 
 ## Challenges
 
-### Different frontmatter variables (pubDate vs date and tags vs categories)
-The first challenge I ran into was different requirements for frontmatter variables. Hugo uses `date` and `categories` whereas Astro uses `pubDate` and `tags`. I handled these in two different ways. I personally prefer `date` over `pubDate` so I went in and changed Astro's Collection. I changed it in `content/config.ts` and then any other file that referenced `pubDate`.
+### Different frontmatter variables (pubDate vs. date and tags vs. categories)
+The first challenge I ran into was the different requirements for frontmatter variables. Hugo uses `date` and `categories` whereas Astro uses `pubDate` and `tags`. I handled these in two different ways. I personally prefer `date` over `pubDate` so I went in and changed Astro's Collection. I changed it in `content/config.ts` and then any other file that referenced `pubDate`.
 
 ```ts
 const posts = defineCollection({
@@ -96,10 +96,10 @@ const posts = defineCollection({
 });
 ```
 
-For `categories` -> `tags`. I did a simple search and replace in my `content/posts` diretory. 
+For `categories` -> `tags`. I did a simple search and replace in my `content/posts` directory. 
 
 ### Images
-In Hugo, images can be stored either in the same directory as a post or in the assets directory. Hugo allows for page resouces and global resources and does a little magic to check both cases
+In Hugo, images can be stored either in the same directory as a post or in the assets directory. Hugo allows for page resources and global resources and does a little magic to check both cases
 
 ```
 content/
@@ -153,4 +153,4 @@ The second issue that I struggled with was my [resume](/resume.pdf) and other gl
 When you [build Hugo](https://gohugo.io/getting-started/usage/#build-your-site), it compiles and builds all of your pages and publishes them to the `public` directory. Since I was hosting my site with Netlify and running the build command there, I didn't need git to track changes to it so I added it to my `.gitignore` file. [Removing this](https://github.com/silent1mezzo/mckerlie.com/commit/c2e68c21bb6ae1563473a3e84fc5cd6449c75ee2) made my resume and other global files start showing up.
 
 ## Final Thoughts
-Overall I've found Astro to be much easier to work with. It seems to have a larger community to build upon and sinec I'm already comfortable in JS it feels more like home. If you're looking to switch as well feel free to message me on [Twitter](https://twitter.com/adammckerlie) or [LinkedIn](https://www.linkedin.com/in/adammckerlie/).
+Overall I've found Astro to be much easier to work with. It seems to have a larger community to build upon and since I'm already comfortable in JS it feels more like home. If you're looking to switch as well feel free to message me on [Twitter](https://twitter.com/adammckerlie) or [LinkedIn](https://www.linkedin.com/in/adammckerlie/).
