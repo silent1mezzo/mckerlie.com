@@ -5,15 +5,15 @@ description: A quick look into how you can migrate your blog from Hugo to Astro,
 tags: [development, meta]
 ---
 
-Early this month I finally migrated this blog from [Hugo](https://gohugo.io/) to [Astro](https://astro.build/). Overall it was fairly easy but I'm going ot talk about the reasons why I made the change, the things I needed to do and the challenges I ran into converting the site.
+Early this month I finally migrated this blog from [Hugo](https://gohugo.io/) to [Astro](https://astro.build/). Overall it was fairly easy but I'm going to talk about the reasons why I made the change, the things I needed to do, and the challenges I ran into converting the site.
 
 ## Why move from Hugo to Astro?
-First and foremost, both Hugo and Astro are frameworks for building websites, especially statically generated content like blogs. Hugo is written in Go and uses a Go-based templating system whereas Astro is built with Javascript and uses a templating system more similar to React with components. I struggled with extending Hugo, querying for posts, routing and extending markdown. For me, this blog was my first foray into Go ([technically second](https://github.com/openflagr/flagr/pulls?q=is%3Apr+author%3Asilent1mezzo+is%3Aclosed)) and as much as I want to like it, I've just never been able to get proficient with the language. I have been using Javascript (and React) for a number of years now and Astro feels much more at home. 
+First and foremost, both Hugo and Astro are frameworks for building websites, especially statically generated content like blogs. Hugo is written in Go and uses a Go-based templating system whereas Astro is built with Javascript and uses a templating system more similar to React with components. I struggled with extending Hugo, querying for posts, routing and extending markdown. For me, this blog was my first foray into Go ([technically second](https://github.com/openflagr/flagr/pulls?q=is%3Apr+author%3Asilent1mezzo+is%3Aclosed)) and as much as I want to like it, I've just never been able to get proficient with the language. I have been using Javascript (and React) for several years now and Astro feels much more at home. 
 
-I also mainly wanted to learn more about Astro and the way that I learn new frameworks and languages is by 
+I also mainly wanted to learn more about Astro and the way that I learn new frameworks and languages is by working on an actual project.
 
 ## Migrating from Hugo to Astro
-While Astro does have an [official guide to migrate](https://docs.astro.build/en/guides/migrate-to-astro/from-hugo/) it's basically "start fresh and good luck" and honestly, that's what I did. Astro has a number of [starter blog themes](https://astro.build/themes/?search=&categories%5B%5D=blog) that you can choose from. I chose the one that looked closest to my original site and got started from that.
+While Astro does have an [official guide to migrate](https://docs.astro.build/en/guides/migrate-to-astro/from-hugo/) it's basically "start fresh and good luck" and honestly, that's what I did. Astro has many [starter blog themes](https://astro.build/themes/?search=&categories%5B%5D=blog) that you can choose from. I chose the one that looked closest to my original site and got started from that.
 
 ### Creating a project
 First, you'll need to create a new project with Astro.
@@ -27,7 +27,7 @@ npm create astro@latest -- --template <template name>
 ```
 
 ### Migrating your content
-Once you've created the new project you can start migrating your posts over. I found that when moving a few over at a time helped me with debugging. When I moved the entire post directory over I got lost with what needed to be updated. Once I figured out the issues on a couple posts (`pubDate` vs `date`, images and public directory) moving over the rest in bulk and editing them went a little quicker.
+Once you've created the new project you can start migrating your posts over. I found that moving a few over at a time helped me with debugging. When I moved the entire post directory over I got lost with what needed to be updated. Once I figured out the issues on a couple posts (`pubDate` vs `date`, images and public directory) moving over the rest in bulk and editing them went a little quicker.
 
 I only worried about a theme after I migrated my content. I didn't want to get too invested until I was sure I could easily move my content. You'll need to either port your theme over or start from scratch, Astro includes a [number of themes](https://astro.build/themes/) you can use to get started. Because of the differences in querying, extending your markdown and more I decided to go this route.
 
