@@ -1,5 +1,5 @@
 ---
-title: "Migrating from Hugo to Astro"
+title: "Migrating your blog from Hugo to Astro"
 date: 2023-10-05
 description: A quick look into how you can migrate your blog from Hugo to Astro, extend your markdown content and fix any issues that come up during migration.
 tags: [development, meta]
