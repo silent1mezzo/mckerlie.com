@@ -8,6 +8,7 @@ export const SITE: Site = {
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 25,
+  twitterAccount: "adammckerlie",
 };
 
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default
@@ -145,5 +146,5 @@ export const SOCIALS: SocialObjects = [
     href: "https://mckerlie.com/index.xml",
     linkTitle: `${SITE.title} RSS`,
     active: true,
-  }
+  },
 ];

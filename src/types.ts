@@ -6,6 +6,7 @@ export type Site = {
   ogImage?: string;
   lightAndDarkMode: boolean;
   postPerPage: number;
+  twitterAccount: string;
 };
 
 export type SocialObjects = {
@@ -39,5 +40,5 @@ export type SocialMedia =
   | "Skype"
   | "Steam"
   | "Telegram"
-  | "Mastodon"
-    "RSS";
+  | "Mastodon";
+("RSS");

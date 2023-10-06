@@ -7,6 +7,8 @@ import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import slugify from "@utils/slugify";
+import { SocialShare } from "astro-social-share";
+import { SITE } from "@config";
 
 export interface Props {
   post: CollectionEntry<"posts">;
@@ -49,6 +51,10 @@ const ogUrl = new URL(
   <main id="main-content">
     <h1 transition:name={slugify(post.data)} class="post-title">{title}</h1>
     <Datetime datetime={date} size="lg" className="my-2" />
+    <SocialShare
+      description={description}
+      via={SITE.twitterAccount}
+    />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
