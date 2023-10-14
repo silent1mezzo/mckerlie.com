@@ -7,6 +7,7 @@ export type Site = {
   lightAndDarkMode: boolean;
   postPerPage: number;
   twitterAccount: string;
+  tags: string[];
 };
 
 export type SocialObjects = {

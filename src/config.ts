@@ -9,6 +9,7 @@ export const SITE: Site = {
   lightAndDarkMode: true,
   postPerPage: 25,
   twitterAccount: "adammckerlie",
+  tags: ['Adam McKerlie', 'engineering leader', 'personal blog', 'musings of an engineering leader' ]
 };
 
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default

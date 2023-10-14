@@ -11,6 +11,7 @@ export interface Props {
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
+  tags?: string[];
 }
 
 const {
@@ -19,12 +20,14 @@ const {
   description = SITE.desc,
   ogImage = SITE.ogImage,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  tags = SITE.tags,
 } = Astro.props;
 
 const socialImageURL = new URL(
   ogImage ?? SITE.ogImage ?? "og.png",
   Astro.url.origin
 ).href;
+
 ---
 
 <!doctype html>
@@ -50,6 +53,7 @@ const socialImageURL = new URL(
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
+    <meta name="keywords" content={tags?.join(", ")} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Open Graph / Facebook -->
