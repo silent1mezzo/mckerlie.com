@@ -1,7 +1,7 @@
 ---
 title: "Simple Deploys using Fabric"
 date: 2018-01-22
-tags: [development]
+tags: [development, programming, fabric]
 ---
 
 At G Adventures we deploy 20+ times a day to many different services that handle millions of requests and millions of dollars in transactions by keeping it simple

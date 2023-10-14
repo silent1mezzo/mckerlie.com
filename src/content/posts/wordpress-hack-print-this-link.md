@@ -1,7 +1,7 @@
 ---
 title: "Wordpress Hack: Adding a ‘Print This’ Link to Your Posts"
 date: 2008-08-12
-tags: [development]
+tags: [development, wordpress]
 postSlug: wordpress-hack-print-this-link
 ---
 

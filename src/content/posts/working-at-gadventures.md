@@ -1,7 +1,7 @@
 ---
 title: "Working at G Adventures"
 date: 2012-12-17
-tags: [misc]
+tags: [misc, hackathon]
 postSlug: working-at-gadventures
 ---
 

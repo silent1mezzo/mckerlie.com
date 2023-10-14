@@ -1,7 +1,7 @@
 ---
 title: "Technical React Apps A Project in A REST Data Restorement and Project Documents with Search (Machine Generated)"
 date: 2018-08-21
-tags: [development]
+tags: [development, ai generated]
 postSlug: technical-react-apps-a-project-in-a-rest-data
 ---
 

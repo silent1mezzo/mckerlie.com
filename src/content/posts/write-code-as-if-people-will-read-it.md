@@ -1,7 +1,7 @@
 ---
 title: "Write Code as if People Will Read It"
 date: 2011-09-12
-tags: [development]
+tags: [development, programming]
 ---
 
 “Oh I’ll just write this little script to do. Nobody will ever see it”. I have heard many programmers say that exact sentence. And inevitably someone at some point will see the hacked together script that you never meant for public consumption.

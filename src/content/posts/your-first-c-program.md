@@ -1,7 +1,7 @@
 ---
 title: "Your First C Program"
 date: 2008-05-23
-tags: [development]
+tags: [development, tutorial, programming]
 ---
 
 So, you want to be able to write C programs? Well, you have come to the right place. Over the next few weeks I’ll be writing a series of tutorials called **“The Basics”**. Each one of these tutorials will cover a different subject that will help you learn how to program in C. In this weeks tutorial I’ll teach you how to write your first C program.

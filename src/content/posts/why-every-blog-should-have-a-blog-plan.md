@@ -1,7 +1,7 @@
 ---
 title: "Why Every Blog Should Have a Blog Plan"
 date: 2008-08-04
-tags: [misc]
+tags: [misc, blogging]
 ---
 
 In the development world, we create plans for pretty much every thing we write, but when it comes to the blogging world I’ve found that a number of people don’t think of creating a plan for their blog. As bloggers, we can increase our blogs success by developing plans for our blogs.

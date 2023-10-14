@@ -1,7 +1,7 @@
 ---
 title: "7 Musings on Minion Management"
 date: 2017-09-08
-tags: [management]
+tags: [management, engineering management]
 postSlug: seven-musings-on-minion-management
 ---
 

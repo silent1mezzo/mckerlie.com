@@ -1,7 +1,7 @@
 ---
 title: "Why I Became a Developer"
 date: 2013-01-19
-tags: [development]
+tags: [development, programming, developer]
 ---
 
 When I was in grade 9 I wanted to be a lawyer. I didn’t really know what that entailed and I had no idea how many more years of schooling I’d have to complete to realize my dream. In grade 10 I took my first law class and absolutely hated my teacher. From that moment on I knew I would never become a lawyer. I dropped out of law class and took computer science and fell in love. Over the years I’ve learnt more and more and I thought I’d take a few minutes to talk about “Why I Became a Developer”.

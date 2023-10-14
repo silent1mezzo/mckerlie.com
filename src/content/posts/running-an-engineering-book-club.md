@@ -1,7 +1,7 @@
 ---
 title: "Running an Engineering Book Club"
 date: 2020-12-16
-tags: [books]
+tags: [books, book club, engineering management]
 ---
 
 Being a manager can be extremely hard, it can feel isolating at times especially if you don’t have a good support network of peers. But how do you cultivate this team of peers when your days are filled with 1:1s, meetings, code reviews and other things you need to get done?

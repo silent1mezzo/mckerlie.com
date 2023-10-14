@@ -1,7 +1,7 @@
 ---
 title: "Using Configurable User Models in Django 1.5"
 date: 2012-11-29
-tags: [development]
+tags: [development, django]
 postSlug: using-configurable-user-models-in-django15
 ---
 

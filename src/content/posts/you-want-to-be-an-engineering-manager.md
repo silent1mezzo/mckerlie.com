@@ -1,7 +1,7 @@
 ---
 title: "So, you want to become an Engineering Manager?"
 date: 2022-08-06
-tags: [management]
+tags: [management, engineering management]
 postSlug: you-want-to-be-an-engineering-manager
 ---
 
