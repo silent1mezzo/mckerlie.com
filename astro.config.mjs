@@ -3,6 +3,9 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { autolinkConfig } from './plugins/rehype-autolink-config';
 import sitemap from "@astrojs/sitemap";
 import mdx from '@astrojs/mdx';
 
@@ -26,6 +29,10 @@ export default defineConfig({
           test: "Table of contents",
         },
       ],
+    ],
+    rehypePlugins: [
+			rehypeSlug,
+      [rehypeAutolinkHeadings, autolinkConfig],
     ],
     shikiConfig: {
       theme: "one-dark-pro",
