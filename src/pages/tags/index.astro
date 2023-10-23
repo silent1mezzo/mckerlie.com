@@ -5,19 +5,31 @@ import Footer from "@components/Footer.astro";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Tag from "@components/Tag.astro";
-import getUniqueTags from "@utils/getUniqueTags";
+import { slugifyStr } from "../../utils/slugify";
 import { SITE } from "@config";
 
 const posts = await getCollection("posts");
 
-let tags = getUniqueTags(posts);
+let tagCounts = {};
+
+posts.forEach(post => {
+  post.data.tags.forEach(tag => {
+    tag = slugifyStr(tag);
+    tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+  });
+})
+
+var tags = Object.keys(tagCounts);
+tags.sort(function(a, b) {
+    return tagCounts[b] - tagCounts[a]
+});
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>
   <Header activeNav="tags" />
   <Main pageTitle="Tags" pageDesc="All the tags used in posts.">
     <ul>
-      {tags.map(tag => <Tag name={tag} size="lg" />)}
+      {tags.map(tag => <Tag name={tag} count={tagCounts[tag]}size="lg" />)}
     </ul>
   </Main>
   <Footer />
