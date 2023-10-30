@@ -3,11 +3,12 @@ title: "The best advice for shipping software"
 date: 2023-10-29
 description: The best piece of advice I've ever received about building software is to ship things youre embarrassed with.
 tags: [advice, engineering management, development, shipping software]
+postSlug: shipping-software-advice
 ---
 
 This is the best piece of advice I've ever received about building software.
 
-"If you're not embarrassed by the thing you shipped, you waited too long"
+> If you're not embarrassed by the thing you shipped, you waited too long
 
 When people first hear this, they think it means shipping buggy code. It isn't.
 
