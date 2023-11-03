@@ -11,9 +11,9 @@
     "astro": "astro",
     "format:check": "prettier --plugin-search-dir=. --check .",
     "format": "prettier --plugin-search-dir=. --write .",
-    "cz": "cz",
     "prepare": "husky install",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "write": "node ./scripts/write.js"
   },
   "dependencies": {
     "@astro-community/astro-embed-twitter": "^0.5.1",
