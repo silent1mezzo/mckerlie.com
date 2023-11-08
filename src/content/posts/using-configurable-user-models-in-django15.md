@@ -8,18 +8,19 @@ postSlug: using-configurable-user-models-in-django15
 Django users take for granted the ability to configure your own user model but prior to Django 1.5 you were stuck with Django’s predefined User model. If you want to take advantage of this new functionality then keep on reading as I’ll go through how to migrate your current application to the new configurable user model.
 
 ## Getting Started
+
 For the sake of simplicity let’s make our own User object that is exactly the same as Django’s current but fixes the email max_length field to comply with [RFC 5321](http://web.archive.org/web/20190124184936/http://tools.ietf.org/html/rfc5321) of 254 characters and adds a required field for the user’s twitter handle.
 
-```
-# myapp.models.py 
+```python
+# myapp.models.py
 from django.contrib.auth.models import AbstractBaseUser
- 
+
 class MyUser(AbstractBaseUser):
     username = models.CharField(max_length=40, unique=True, db_index=True)
     email = models.EmailField(max_length=254, unique=True)
     twitter_handle = models.CharField(max_length=255)
     ...
- 
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['twitter_handle']
 ```
@@ -37,7 +38,7 @@ A list of the field names that must be provided when creating a user. `REQUIRED_
 
 Now that you’ve created your User model you have to tell Django that you want to use it instead of their default `User` model. To do this you add the following to your settings file:
 
-```
+```python
 # settings.py
 AUTH_USER_MODEL = 'myapp.MyUser'
 ```
@@ -45,12 +46,13 @@ AUTH_USER_MODEL = 'myapp.MyUser'
 With this setting Django now knows which User model to use.
 
 ## Using Foreign Keys
+
 Once you’ve set up your model its now time reference it in other models.
 
-```
+```python
 from django.conf import settings
 from django.db import models
- 
+
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
 ```
@@ -58,11 +60,12 @@ class Post(models.Model):
 This tells Django to create a ForeignKey to the User model that you specify in your settings.
 
 ## Custom Manager
+
 Now that you’ve created your own User model you also need to create your own Manager to handle the creation of Users and Super Users. If your User model defines the same fields as Django’s default User you can just install Django’s UserManager.
 
-```
+```python
 from django.contrib.auth.models import UserManager, AbstractBaseUser
- 
+
 class MyUser(AbstractBaseUser):
     ...
     objects = UserManager
@@ -70,23 +73,23 @@ class MyUser(AbstractBaseUser):
 
 If your User model includes different fields you’ll need to define your own custom manager that extends BaseUserManager.
 
-```
+```python
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
- 
+
 class MyUserManager(BaseUserManager):
     def create_user(self, email, twitter_handle, password=None):
         if not email:
             raise ValueError('Users must have an email address')
- 
+
         user = self.model(
             email=MyUserManager.normalize_email(email),
             twitter_handle=twitter_handle,
         )
- 
+
         user.set_password(password)
         user.save(using=self._db)
         return user
- 
+
     def create_superuser(self, email, twitter_handle, password):
         user = self.create_user(email,
             password=password,
@@ -95,14 +98,15 @@ class MyUserManager(BaseUserManager):
         user.is_admin = True
         user.save(using=self._db)
         return user
- 
- 
+
+
 class MyUser(AbstractBaseUser):
     ...
     objects = MyUserManager
 ```
 
 ## Other Methods
+
 There are a few other methods you need to include:
 
 **get_full_name:**
@@ -116,26 +120,26 @@ A boolean attribute that indicates whether the user is considered “active”. 
 
 ## Final Example
 
-```
+```python
 # models.py
 from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
- 
+
 class MyUserManager(BaseUserManager):
     def create_user(self, email, twitter_handle, password=None):
         if not email:
             raise ValueError('Users must have an email address')
- 
+
         user = self.model(
             email=MyUserManager.normalize_email(email),
             twitter_handle=twitter_handle,
         )
- 
+
         user.set_password(password)
         user.save(using=self._db)
         return user
- 
+
     def create_superuser(self, email, twitter_handle, password):
         user = self.create_user(email,
             password=password,
@@ -144,49 +148,49 @@ class MyUserManager(BaseUserManager):
         user.is_admin = True
         user.save(using=self._db)
         return user
- 
- 
+
+
 class MyUser(AbstractBaseUser):
     email = models.EmailField(max_length=254, unique=True, db_index=True)
     twitter_handle = models.CharField(max_length=255)
- 
+
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
- 
+
     objects = MyUserManager()
- 
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['twitter_handle']
- 
+
     def get_full_name(self):
         # For this case we return email. Could also be User.first_name User.last_name if you have these fields
         return self.email
- 
+
     def get_short_name(self):
         # For this case we return email. Could also be User.first_name if you have this field
         return self.email
- 
+
     def __unicode__(self):
         return self.email
- 
+
     def has_perm(self, perm, obj=None):
         # Handle whether the user has a specific permission?"
         return True
- 
+
     def has_module_perms(self, app_label):
         # Handle whether the user has permissions to view the app `app_label`?"
         return True
- 
+
     @property
     def is_staff(self):
         # Handle whether the user is a member of staff?"
         return self.is_admin
- 
- 
+
+
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
- 
- 
+
+
 #views.py
 from django.contrib.auth import get_user_model
 ...
