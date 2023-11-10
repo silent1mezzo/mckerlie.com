@@ -94,29 +94,6 @@ const socialImageURL = new URL(
     <ViewTransitions />
 
     <script is:inline src="/toggle-theme.js"></script>
-    <script>
-      import * as Sentry from '@sentry/browser';
-
-      Sentry.init({
-        dsn: 'https://3ec5190943c3445d314ff2144751d8c1@o436943.ingest.sentry.io/4505986690973696',
-        integrations: [
-          new Sentry.BrowserTracing({
-            // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
-            tracePropagationTargets: ["localhost", /^https:\/\/mckerlie\.io\/api/],
-          }),
-          new Sentry.Replay({
-            maskAllText: false,
-          }),
-        ],
-        tracesSampleRate: 1.0,
-        // This sets the sample rate to be 10%. You may want this to be 100% while
-        // in development and sample at a lower rate in production
-        replaysSessionSampleRate: 1.0,
-        // If the entire session is not sampled, use the below sample rate to sample
-        // sessions when an error occurs.
-        replaysOnErrorSampleRate: 1.0,
-      });
-    </script>
   </head>
   <body>
     <slot />
