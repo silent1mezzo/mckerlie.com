@@ -3,29 +3,36 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
+import Card from "@components/Card";
 import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import slugify from "@utils/slugify";
 import { SocialShare } from "astro-social-share";
 import { SITE } from "@config";
+import { getRelatedPosts } from "@utils/getRelatedPosts";
 
 export interface Props {
   post: CollectionEntry<"posts">;
+  allPosts?: CollectionEntry<"posts">[];
 }
 
-const { post } = Astro.props;
+const { post, allPosts } = Astro.props;
 
 const { title, author, description, ogImage, canonicalURL, date, tags } =
   post.data;
 
 const { Content } = await post.render();
 
+const slug = slugify(post.data);
+
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ?? `/posts/${slugify(post.data)}.png`,
+  ogImageUrl ?? `/posts/${slug}.png`,
   Astro.url.origin
 ).href;
+
+const relatedPosts = getRelatedPosts(allPosts, slug, tags);
 ---
 
 <Layout
@@ -50,7 +57,7 @@ const ogUrl = new URL(
     </button>
   </div>
   <main id="main-content">
-    <h1 transition:name={slugify(post.data)} class="post-title">{title}</h1>
+    <h1 transition:name={slug} class="post-title">{title}</h1>
     <Datetime datetime={date} size="lg" className="my-2" />
     <SocialShare
       description={description}
@@ -63,6 +70,15 @@ const ogUrl = new URL(
 
     <ul class="tags-container">
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
+    </ul>
+    
+    <h2  class="post-title">Related Posts</h2>
+    <ul class="related-posts">
+      {relatedPosts.map(post => <Card
+        href={`/posts/${slugify(post.data)}`}
+        frontmatter={post.data}
+        secHeading={false}
+      />)}
     </ul>
   </main>
   <Footer />
