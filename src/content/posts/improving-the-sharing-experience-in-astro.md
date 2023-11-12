@@ -5,7 +5,7 @@ description: A deep dive into how I built my first npm package, a social media s
 tags: [astro, open source, astro component, development, javascript]
 ---
 
-A couple months ago I [migrated this blog from Hugo to Astro](https://mckerlie.com/posts/migrating-your-blog-from-hugo-to-astro) because I was more familiar with the underlying language (Javascript) and I wanted to learn this relatively new framework. Overall, the process was extremely easy but I was missing something that came included previously, sharing links to allow people to share my blog posts on social media. That's where [Astro Social Share](https://www.npmjs.com/package/astro-social-share) comes in, a fully configurable set of social media buttons for your website. Here's how I went about designing, building and releasing my first NPM package.
+A couple months ago I [migrated this blog from Hugo to Astro](/posts/migrating-your-blog-from-hugo-to-astro/) because I was more familiar with the underlying language (Javascript) and I wanted to learn this relatively new framework. Overall, the process was extremely easy but I was missing something that came included previously, sharing links to allow people to share my blog posts on social media. That's where [Astro Social Share](https://www.npmjs.com/package/astro-social-share) comes in, a fully configurable set of social media buttons for your website. Here's how I went about designing, building and releasing my first NPM package.
 
 ## Building v0
 
