@@ -1,7 +1,7 @@
 ---
 title: "The best advice for shipping software"
 date: 2023-10-29
-description: The best piece of advice I've ever received about building software is to ship things youre embarrassed with.
+description: The best piece of advice I've ever received about building software is to ship things you're embarrassed with.
 tags: [advice, engineering management, development, shipping software]
 postSlug: shipping-software-advice
 ---

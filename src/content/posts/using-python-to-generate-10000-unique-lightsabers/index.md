@@ -1,8 +1,9 @@
 ---
 title: "Using Python to generate over 10,000 unique 8-bit lightsabers"
 date: 2020-05-04
-tags: [development]
+tags: [development, python, tutorial]
 postSlug: using-python-to-generate-10000-unique-lightsabers
+description: A deep-dive into how I built a program that generated over 10,000 unique 8-bit lightsabers and then tweeted them daily.
 ---
 
 Python is great for a number of things. It powers [1.4% of the internet](https://w3techs.com/technologies/details/pl-python), [Nasa uses it a lot!](https://code.nasa.gov/?q=python) and you can use it to [create art](https://simpleprogrammer.com/python-generative-art-math/). In honour of [Star Wars Day](https://en.m.wikipedia.org/wiki/Star_Wars_Day), I wanted to create a program that dynamically generated lightsabers and tweeted them out once a day.
