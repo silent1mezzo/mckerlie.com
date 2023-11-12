@@ -1,7 +1,7 @@
 ---
 title: "Welcome to mckerlie.com"
 date: 2022-08-02T00:02:47-04:00
-tags: [meta, management]
+tags: [meta]
 postSlug: welcome
 ---
 
