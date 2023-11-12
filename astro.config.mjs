@@ -49,5 +49,4 @@ export default defineConfig({
     }
   },
   scopedStyleStrategy: "where",
-  trailingSlash: "never"
 });

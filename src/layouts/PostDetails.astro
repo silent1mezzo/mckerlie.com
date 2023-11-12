@@ -75,7 +75,7 @@ const relatedPosts = getRelatedPosts(allPosts, slug, tags);
     <h2  class="post-title">Related Posts</h2>
     <ul class="related-posts">
       {relatedPosts.map(post => <Card
-        href={`/posts/${slugify(post.data)}`}
+        href={`/posts/${slugify(post.data)}/`}
         frontmatter={post.data}
         secHeading={false}
       />)}

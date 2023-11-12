@@ -12,7 +12,7 @@ export async function GET() {
     description: SITE.desc,
     site: SITE.website,
     items: sortedPosts.map(({ data }) => ({
-      link: `posts/${slugify(data)}`,
+      link: `posts/${slugify(data)}/`,
       title: data.title,
       description: data.description,
       pubDate: new Date(data.date),
