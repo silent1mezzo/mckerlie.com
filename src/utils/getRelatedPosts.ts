@@ -1,3 +1,4 @@
+// https://www.joshfinnie.com/blog/creating-a-similar-posts-component-in-astrojs/
 import type { CollectionEntry } from "astro:content";
 
 export function getRelatedPosts(
