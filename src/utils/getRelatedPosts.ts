@@ -2,9 +2,10 @@
 import type { CollectionEntry } from "astro:content";
 
 export function getRelatedPosts(
-  posts: CollectionEntry<"posts">[],
-  slug: string,
-  tags: string[]
+  posts: CollectionEntry<"posts">[], // All posts for the blog
+  slug: string, // Current page's Slug
+  tags: string[], // Current page's tags
+  numRelatedPosts: number = 4 // Number of elements to return
 ) {
   const relatedPosts = posts
     .filter(
@@ -14,18 +15,17 @@ export function getRelatedPosts(
     )
     .map(post => ({
       ...post,
-      sameTagCount: post.data.tags.filter(tag => tags.includes(tag)).length,
+      tagCount: post.data.tags.filter(tag => tags.includes(tag)).length,
     }))
     .sort((a, b) => {
-      if (a.sameTagCount > b.sameTagCount) return -1;
-      if (b.sameTagCount > a.sameTagCount) return 1;
+      if (a.tagCount > b.tagCount) return -1;
+      if (b.tagCount > a.tagCount) return 1;
 
       if (a.data.date > b.data.date) return -1;
       if (a.data.date < b.data.date) return 1;
 
       return 0;
-    })
-    .slice(0, 5);
+    });
 
-  return relatedPosts.slice(0, 4);
+  return relatedPosts.slice(0, numRelatedPosts);
 }
