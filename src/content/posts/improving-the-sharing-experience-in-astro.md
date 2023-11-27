@@ -1,7 +1,7 @@
 ---
 title: "Improving the sharing experience in Astro"
 date: 2023-11-02T10:00:00Z
-description: A deep dive into how I built my first npm package, a social media sharing component for the Astro framework
+description: A deep dive into how I built my first npm package, a social media sharing component for the Astro framework.
 tags: [astro, open source, astro component, development, javascript]
 ---
 

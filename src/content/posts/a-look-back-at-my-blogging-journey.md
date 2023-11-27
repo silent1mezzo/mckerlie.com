@@ -2,7 +2,7 @@
 title: "A Look Back at my Blogging Journey"
 date: 2023-11-13T10:00:00Z
 tags: ["blogging", "meta"]
-description: "I've been blogging on and off for almost 20 years now and I wanted to quickly look back at how the content and technology has changed as well as share some numbers oover the years"
+description: "I've been blogging on and off for almost 20 years now and I wanted to quickly look back at how the content and technology has changed as well as share some numbers over the years."
 ---
 
 For the last 18 years, I’ve been writing content on the internet. When I write it out like that, it feels unbelievable. My first articles can now vote (though I wouldn’t trust them to based on how poorly they’re written). In that time, I’ve written on several different websites and platforms, used various different technologies and written about vastly different topics. I’ve had articles that have gone absolutely viral and those that have been read by nobody. Here’s a quick look back over the years.
