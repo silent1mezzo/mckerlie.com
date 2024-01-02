@@ -1,6 +1,6 @@
 ---
 title: "2023 review of the books I read"
-date: 2024-01-03
+date: 2024-01-02
 tags: [books]
 description: A look into the books I read in 2023, the goals I set and how I did.
 ---
