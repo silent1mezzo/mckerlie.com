@@ -5,7 +5,7 @@ description: A quick look into running scheduled tasks on your Digital Ocean dro
 tags: [development]
 ---
 
-I love [Digital Ocean](https://digitalocean.com/). It’s incredibly easy to set up, it’s cheap to get started and you can scale up easily as your website grows. All of my old sites were hosted on there and when I needed a host for my latest project, [Daily Lightsaber,](https://twitter.com/DailyLightsaber) Digital Ocean was the obvious choice.
+I love [Digital Ocean](https://m.do.co/c/e192b7a9461b). It’s incredibly easy to set up, it’s cheap to get started and you can scale up easily as your website grows. All of my old sites were hosted on there and when I needed a host for my latest project, [Daily Lightsaber,](https://twitter.com/DailyLightsaber) Digital Ocean was the obvious choice.
 
 The main feature of Daily Lightsaber is the scheduled post of a new lightsaber every day. To do this I needed to add [Cron](https://en.wikipedia.org/wiki/Cron) to my droplet. This guide assumes you have a droplet running with Ubuntu 18.04.
 
@@ -13,13 +13,13 @@ The main feature of Daily Lightsaber is the scheduled post of a new lightsaber e
 
 The first thing you’ll want to do is make sure your droplet’s package manager is updated to the latest version.
 
-```
+```bash
 $ sudo apt update
 ```
 
 Then you can simply install cron
 
-```
+```bash
 $ sudo apt-get install cron
 ```
 
@@ -27,13 +27,13 @@ $ sudo apt-get install cron
 
 Once you’ve installed cron onto your droplet you can edit your crontab and start adding entries to run automatically. A crontab is a special file that holds the schedule of jobs cron will run. To edit your crontab you can type:
 
-```
+```bash
 $ crontab -e
 ```
 
 The first time you run this command you’ll be given the option to choose a text editor to edit it with. If you don’t have a preference, `nano` is probably the most user friendly.
 
-```
+```bash
 no crontab for <user_name> - using an empty one
 
 Select an editor.  To change later, run 'select-editor'.
@@ -47,7 +47,7 @@ Choose 1-4 [1]:
 
 Once you’ve chosen you’ll see the default crontab text. You can remove all of the comments if you’d like or simply add a new line at the bottom.
 
-```
+```bash
 # Edit this file to introduce tasks to be run by cron.
 #
 # Each task to run has to be defined through a single line
@@ -74,7 +74,7 @@ Once you’ve chosen you’ll see the default crontab text. You can remove all o
 
 Each line in the crontab will execute a single command. Below I execute a python script everyday at 9:12pm and pipe any output to a log file.
 
-```
+```bash
 # ┌───────────── minute (0 - 59)
 # │ ┌───────────── hour (0 - 23)
 # │ │ ┌───────────── day of the month (1 - 31)
@@ -89,8 +89,8 @@ Each line in the crontab will execute a single command. Below I execute a python
 
 Now that you have cron installed and you’ve edited your crontab you need to make sure it’s enabled. This is the final step to get everything working.
 
-```
+```bash
 $ sudo systemctl enable cron
 ```
 
-Now you have a fully functioning cron on your droplet. This will allow you to run commands at a set schedule. If you’re interested in getting set up with Digital Ocean you can use [this link](https://m.do.co/c/e192b7a9461b) to get $100 in free credits.
+Now you have a fully functioning cron on your droplet. This will allow you to run commands at a set schedule. If you’re interested in getting set up with Digital Ocean you can use [this link](https://m.do.co/c/e192b7a9461b) to get $200 in free credits.
