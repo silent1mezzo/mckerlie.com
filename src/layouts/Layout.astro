@@ -98,4 +98,17 @@ const socialImageURL = new URL(
   <body>
     <slot />
   </body>
+  <script>
+      // @ts-nocheck
+      (function () {
+          window.counterscale = {
+              q: [["set", "siteId", "mckerlie-com"], ["trackPageview"]],
+          };
+      })();
+  </script>
+  <script
+      id="counterscale-script"
+      src="https://{subdomain-emitted-from-npm-run-deploy}.pages.dev/tracker.js"
+      defer
+  ></script>
 </html>
