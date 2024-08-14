@@ -2,6 +2,7 @@
 title: "On Writing More"
 date: 2022-11-20
 tags: [musings]
+description: A quick meta post about my desire to write more and how I plan to accomplish it
 ---
 
 I've been a big proponent of writing as a form of learning for many years. In University I wrote programming tutorials on https://devjargon.com with a friend. These old articles are now posted on here and you can see how poorly they were written. Next came https://procrastinatingdev.com (now redirects here) and a number of years I wrote about more in-depth technical articles. As my career progressed into management so did the topics I wrote on. I spoke about [meetings](/posts/meetings-can-be-poisonous/) and [hiring](/posts/five-traits-when-hiring/) and [becoming an engineering manager](/posts/you-want-to-be-an-engineering-manager/). For years I ran a technical blog for the company I worked at, mentoring and guiding engineers to write about the things they were working on. We got 100s of thousands of page views but more importantly the engineers got noticed for the content we wrote.
