@@ -4,8 +4,6 @@ import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { autolinkConfig } from './plugins/rehype-autolink-config';
 import sitemap from "@astrojs/sitemap";
 import mdx from '@astrojs/mdx';
 
@@ -25,7 +23,7 @@ export default defineConfig({
     remarkPlugins: [remarkToc, [remarkCollapse, {
       test: "Table of contents"
     }]],
-    rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, autolinkConfig]],
+    rehypePlugins: [rehypeSlug],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true
