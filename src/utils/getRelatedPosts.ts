@@ -10,6 +10,7 @@ export function getRelatedPosts(
   const relatedPosts = posts
     .filter(
       post =>
+        post.data.draft != true &&
         post.slug != slug &&
         post.data.tags?.filter(tag => tags.includes(tag)).length > 0
     )
