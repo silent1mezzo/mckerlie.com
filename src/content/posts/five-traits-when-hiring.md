@@ -1,7 +1,7 @@
 ---
 title: "The Five Traits I Look For When Hiring"
 date: 2017-01-26
-tags: [management]
+tags: ["engineering management"]
 postSlug: five-traits-when-hiring
 ---
 
@@ -41,5 +41,7 @@ This question is one that I ask rather bluntly “Give me an example of your cre
 I’m not interested in hiring [brilliant jerks](http://www.inc.com/jim-schleckser/why-netflix-doesn-t-tolerate-brilliant-jerks.html). I know there’s some controversy over that term but at the end of the day if an employee can’t treat their coworkers with respect I don’t want them on the team. This conflict leads to discouragement and distrust with the hiring process and ultimately leads to other staff leaving.
 
 As I mentioned above, I like to have the candidate talk about a time when they had a conflict with a co-worker. This shows me how they handle conflict, how they try to get their points across as well as how polite they are. I’m looking for the candidate to describe a time where they collaboratively improved a difficult situation through positive discussion, coaching, and problem-solving.
-- - - -
+
+---
+
 Obviously showcasing these traits doesn’t excuse a candidate from lacking a required skill but if it comes down to two comparable candidates I’ll select the one that’s stronger in one of the above traits every single time.

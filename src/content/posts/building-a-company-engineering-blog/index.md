@@ -1,7 +1,7 @@
 ---
 title: "Building a Company Engineering Blog"
 date: 2023-04-17
-tags: [management]
+tags: ["engineering management"]
 description: Creating a company engineering blog is hard. From building to planning to encouraging engineers to write. This post walks you through how to build a company engineering blog successfully.
 keywords:
   [
