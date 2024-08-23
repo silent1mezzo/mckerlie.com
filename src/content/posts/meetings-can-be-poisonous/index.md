@@ -2,6 +2,7 @@
 title: "Meetings can be Poisonous"
 date: 2020-12-22
 tags: ["engineering management"]
+description: Explore the hidden costs of excessive meetings on productivity and employee morale, and learn effective strategies to minimize meetings and improve efficiency in the workplace.
 ---
 
 Eight years ago I wrote about how [meetings are poisonous](/posts/meetings-are-poisonous/) . At the time I was the senior developer on my team and I was getting pulled into 4-5 meetings a day. This killed my productivity and made it difficult to get any of my IC work done. I struggled for many months until I realized that I could just say no to meetings. Since then I’ve transitioned from [developer to manager](/posts/from-developer-to-manager/) , manager to director and then back to manager. My feelings on meetings have changed over the years but the general advice from eight years ago still stays the same. If you’re interested in reading more about meetings Leigh Espy has a great book called “ [Bad Meetings Happen To Good People](https://amzn.to/3riD8Oc) ” which is worth a read.

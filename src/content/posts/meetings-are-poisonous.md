@@ -2,6 +2,7 @@
 title: "Meetings are Poisonous"
 date: 2012-11-22
 tags: ["engineering management"]
+description: Meetings can be detrimental to productivity and learn strategies to minimize unnecessary meetings, boosting efficiency and focus in your team. Here's some practical tips to optimize your work environment and reclaim valuable time.
 ---
 
 _This was originally written on November 22, 2012 when I was an Individual Contributor. I’ve written an updated post on [Meetings can be Poisonous](/posts/meetings-can-be-poisonous/)_
@@ -28,10 +29,11 @@ When was the last time you heard someone say “That meeting was great, I got a 
 
 ## Tips for Meetings (if you must have one)
 
-*30 minutes or less:*Longer meetings don’t mean you get more done. Keep your meetings short and on point.
+_30 minutes or less_: Longer meetings don’t mean you get more done. Keep your meetings short and on point.
 _End the meeting early_: Ending the meeting early will make people think it was productive.
 _No Laptops or Phones_: These just provide distractions for people and take away from the purpose of the meeting.
 _Take Charge_: The person who calls the meeting should take charge. When there’s not a leader people get off track unfocused.
 _5 People or Less_: As soon as you have more than 5 people the meeting gets out of hand. Keeping it to less than 5 people means everyone can talk and discuss without stepping on one another’s toes.
-*Action Plan:*Every meeting should end with an action plan. This action plan should have 3 items or less so people can quickly get them done.
+_Action Plan_: Every meeting should end with an action plan. This action plan should have 3 items or less so people can quickly get them done.
+
 Before you schedule your next meeting ask yourself “Is this meeting necessary”. If the answer is yes, make sure you follow the above tips to make sure you don’t waste everyone’s time.
