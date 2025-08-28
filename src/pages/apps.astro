@@ -1,0 +1,106 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Hr from "@components/Hr.astro";
+
+export const prerender = true;
+---
+
+<Layout title="Apps">
+  <Header activeNav="apps" />
+  <main id="main-content">
+    <section id="apps-header">
+      <h1>Apps</h1>
+      <p>Here are some apps and tools I've built:</p>
+    </section>
+
+    <Hr />
+
+    <section id="apps-content">
+      <div class="apps-grid">
+        <div class="app-card">
+          <h3>Blackjack Trainer</h3>
+          <p class="app-description">Master your blackjack skills with our comprehensive training app.</p>
+          
+          <div class="app-stats">
+            <div class="stat">
+              <span class="stat-label">Downloads:</span>
+              <span class="stat-value">50+</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">MRR:</span>
+              <span class="stat-value">$8</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Launched:</span>
+              <span class="stat-value">August 22nd, 2025</span>
+            </div>
+          </div>
+          
+          <a href="https://apps.apple.com/us/app/blackjack-trainer/id6751204237" target="_blank" rel="noopener noreferrer" class="app-link">
+            View on App Store ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  #apps-header {
+    @apply pb-6 pt-8;
+  }
+  #apps-header h1 {
+    @apply text-3xl font-bold sm:text-5xl;
+  }
+  #apps-header p {
+    @apply my-4 text-lg;
+  }
+  
+  #apps-content {
+    @apply pb-6 pt-6;
+  }
+  
+  .apps-grid {
+    @apply grid gap-6 sm:grid-cols-2;
+  }
+  
+  .app-card {
+    @apply rounded-lg border border-skin-line bg-skin-card p-6;
+  }
+  
+  .app-card h3 {
+    @apply mb-2 text-xl font-semibold text-skin-base;
+  }
+  
+  .app-description {
+    @apply mb-4 text-skin-base/80;
+  }
+  
+  .app-stats {
+    @apply mb-4 space-y-2;
+  }
+  
+  .stat {
+    @apply flex justify-between;
+  }
+  
+  .stat-label {
+    @apply text-sm text-skin-base/70;
+  }
+  
+  .stat-value {
+    @apply text-sm font-medium text-skin-base;
+  }
+  
+  .app-link {
+    @apply inline-flex items-center gap-1 rounded bg-skin-accent px-3 py-2 text-sm font-medium text-skin-inverted transition-colors hover:bg-skin-accent/90;
+  }
+  
+  .no-apps {
+    @apply col-span-full text-center text-lg text-skin-base/70;
+  }
+</style>
