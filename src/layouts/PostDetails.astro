@@ -5,7 +5,7 @@ import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Card from "@components/Card";
 import Datetime from "@components/Datetime";
-import type { CollectionEntry } from "astro:content";
+import { render, type CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import slugify from "@utils/slugify";
 import { SocialShare } from "astro-social-share";
@@ -22,7 +22,7 @@ const { post, allPosts } = Astro.props;
 const { title, author, description, ogImage, canonicalURL, date, tags } =
   post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const slug = slugify(post.data);
 

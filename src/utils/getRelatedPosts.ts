@@ -1,5 +1,6 @@
 // https://www.joshfinnie.com/blog/creating-a-similar-posts-component-in-astrojs/
 import type { CollectionEntry } from "astro:content";
+import slugify from "@utils/slugify";
 
 export function getRelatedPosts(
   posts: CollectionEntry<"posts">[], // All posts for the blog
@@ -11,7 +12,7 @@ export function getRelatedPosts(
     .filter(
       post =>
         post.data.draft != true &&
-        post.slug != slug &&
+        slugify(post.data) != slug &&
         post.data.tags?.filter(tag => tags.includes(tag)).length > 0
     )
     .map(post => ({

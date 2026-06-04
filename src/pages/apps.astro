@@ -26,7 +26,7 @@ export const prerender = true;
           <div class="app-stats">
             <div class="stat">
               <span class="stat-label">Downloads:</span>
-              <span class="stat-value">350+</span>
+              <span class="stat-value">500+</span>
             </div>
             <div class="stat">
               <span class="stat-label">MRR:</span>
@@ -38,9 +38,43 @@ export const prerender = true;
             </div>
           </div>
           
-          <a href="https://apps.apple.com/us/app/blackjack-trainer/id6751204237" target="_blank" rel="noopener noreferrer" class="app-link">
-            View on App Store ↗
-          </a>
+          <div class="app-links">
+            <a href="https://bjtrainer.co/" target="_blank" rel="noopener noreferrer" class="app-link app-link-secondary">
+              Visit Website ↗
+            </a>
+            <a href="https://apps.apple.com/us/app/blackjack-trainer/id6751204237" target="_blank" rel="noopener noreferrer" class="app-link">
+              View on App Store ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <h3><a href="https://calledup.app" target="_blank" rel="noopener noreferrer">CalledUp</a></h3>
+          <p class="app-description">Roster, schedule, lineups, and parent communication, all in one place. Stop chasing RSVPs and start coaching.</p>
+
+          <div class="app-stats">
+            <div class="stat">
+              <span class="stat-label">Downloads:</span>
+              <span class="stat-value">50+</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">MRR:</span>
+              <span class="stat-value">Free forever</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Launched:</span>
+              <span class="stat-value">May 22nd, 2026</span>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <a href="https://calledup.app" target="_blank" rel="noopener noreferrer" class="app-link app-link-secondary">
+              Visit Website ↗
+            </a>
+            <a href="https://apps.apple.com/ca/app/calledup/id6771082932" target="_blank" rel="noopener noreferrer" class="app-link">
+              View on App Store ↗
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -96,8 +130,16 @@ export const prerender = true;
     @apply text-sm font-medium text-skin-base;
   }
   
+  .app-links {
+    @apply flex flex-wrap gap-2;
+  }
+
   .app-link {
     @apply inline-flex items-center gap-1 rounded bg-skin-accent px-3 py-2 text-sm font-medium text-skin-inverted transition-colors hover:bg-skin-accent/90;
+  }
+
+  .app-link-secondary {
+    @apply border border-skin-line bg-skin-fill text-skin-base hover:bg-skin-card;
   }
   
   .no-apps {
