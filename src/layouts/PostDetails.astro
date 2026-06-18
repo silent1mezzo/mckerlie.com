@@ -33,6 +33,15 @@ const ogUrl = new URL(
 ).href;
 
 const relatedPosts = getRelatedPosts(allPosts, slug, tags);
+
+// astro-social-share interpolates these straight into share URLs without
+// encoding them, so any title/description containing characters like " or &
+// produces malformed HTML (which breaks the page during minification).
+// URL-encode them here so the generated share links are valid.
+const shareTitle = encodeURIComponent(title);
+const shareDescription = description
+  ? encodeURIComponent(description)
+  : undefined;
 ---
 
 <Layout
@@ -60,9 +69,9 @@ const relatedPosts = getRelatedPosts(allPosts, slug, tags);
     <h1 transition:name={slug} class="post-title">{title}</h1>
     <Datetime datetime={date} size="lg" className="my-2" />
     <SocialShare
-      description={description}
+      description={shareDescription}
       via={SITE.twitterAccount}
-      title={title}
+      title={shareTitle}
     />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
